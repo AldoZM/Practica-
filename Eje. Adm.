@@ -1,0 +1,47 @@
+#include <stdio.h>
+#include <string.h>
+
+struct tiempo_final 
+{
+    int hf,mf,sf;
+
+}t2;
+
+struct tiempo_inicial {
+
+    int hi,mi,si;
+
+}t1;
+
+
+void calculo_de_tiempo (struct tiempo_final t2, struct tiempo_inicial t1, int x,int y, int z){
+    printf("Su tiempo de llegada es: %d:%d.%d\n", t1.hi,t1.mi,t1.si);
+    printf("Su tiempo de salida es: %d:%d.%d\n", t2.hf,t2.mf,t2.sf);
+    //calcular la diferencia de tiempo
+    x= t2.hf-=t1.hi;
+    y= t2.mf-=t1.mi;
+    z= t2.sf-=t1.si;
+    printf("La diferencia de hora es la siguiente\n");
+    printf("%d:%d.%d\n",x,y,z);
+}
+
+int main (){
+    struct tiempo_final P2;
+    struct tiempo_inicial P1;
+    printf("Introduzca la hora de llegada:\n");
+    scanf("%d\n",&P1.hi);
+    printf("Introduzca los minutos de llegada:\n");
+    scanf("%d\n",&P1.mi);
+    printf("Introduzca los segundos de llegada:\n");
+    scanf("%d\n",&P1.si);
+    //Aqui termina lo que es la primera hora 
+    printf("Introduzca la hora de salida:\n");
+    scanf("%d\n",&P2.hf);
+    printf("Introduzca los minutos de salida:\n");
+    scanf("%d\n",&P2.mf);
+    printf("Introduzca la hora de salida:\n");
+    scanf("%d\n",&P2.sf);
+    //Aqui termina lo que es la ultima hora 
+
+}
+
